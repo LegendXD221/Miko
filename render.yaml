@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: miko
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: MONGO_TOKEN
+        sync: false
+      - key: GIPHY_TOKEN
+        sync: false
+      - key: DISCORD_ID
+        sync: false
+      - key: PORT
+        value: "3000"
+      - key: HOST
+        value: "0.0.0.0"
